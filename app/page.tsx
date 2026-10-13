@@ -25,11 +25,11 @@ export default function Home() {
 
             {/* Título y subtítulo central */}
             <div className="flex-1 min-w-0 text-center">
-              <h1 className="text-sm sm:text-lg md:text-2xl lg:text-3xl font-bold text-white leading-tight whitespace-pre-line break-words">
+              <h1 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight whitespace-pre-line break-words">
                 {content.hero.title}
               </h1>
               {content.hero.subtitle && (
-                <h2 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-blue-400 mt-1 leading-snug whitespace-pre-line break-words">
+                <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-semibold text-blue-400 mt-1 leading-snug whitespace-pre-line break-words">
                   {content.hero.subtitle}
                 </h2>
               )}
@@ -62,15 +62,15 @@ export default function Home() {
 
             {/* Descripción adicional */}
             <div className="w-full max-w-7xl mx-auto text-center space-y-3">
-              <h3 className="text-base md:text-2xl font-bold text-white whitespace-pre-line break-words">
+              <h3 className="text-lg md:text-3xl lg:text-4xl font-bold text-white whitespace-pre-line break-words">
                 {content.heroDescription.title}
               </h3>
               {content.heroDescription.subtitle && (
-                <h4 className="text-sm md:text-xl font-semibold text-[#D2BB81] whitespace-pre-line break-words">
+                <h4 className="text-base md:text-2xl lg:text-3xl font-semibold text-[#D2BB81] whitespace-pre-line break-words">
                   {content.heroDescription.subtitle}
                 </h4>
               )}
-              <p className="text-xs md:text-base text-gray-200 leading-relaxed whitespace-pre-line break-words">
+              <p className="text-sm md:text-lg lg:text-xl text-gray-200 leading-relaxed whitespace-pre-line break-words">
                 {content.heroDescription.description}
               </p>
             </div>
@@ -81,15 +81,15 @@ export default function Home() {
       {/* Section 2 */}
       <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]">
         <div className="max-w-4xl mx-auto text-left space-y-6">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#8D8677]">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#8D8677]">
             {content.section2.title}
           </h2>
           {content.section2.subtitle && (
-            <h3 className="text-xl md:text-3xl font-semibold text-[#162128]">
+            <h3 className="text-lg md:text-2xl font-semibold text-[#162128]">
               {content.section2.subtitle}
             </h3>
           )}
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
             {content.section2.description}
           </p>
         </div>
@@ -103,15 +103,15 @@ export default function Home() {
       {/* Section 3 */}
       <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]">
         <div className="max-w-4xl mx-auto text-left space-y-6 mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#8D8677]">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#8D8677]">
             {content.section3.title}
           </h2>
           {content.section3.subtitle && (
-            <h3 className="text-xl md:text-3xl font-semibold text-[#162128]">
+            <h3 className="text-lg md:text-2xl font-semibold text-[#162128]">
               {content.section3.subtitle}
             </h3>
           )}
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
             {content.section3.description}
           </p>
         </div>
@@ -136,11 +136,11 @@ export default function Home() {
 
               {/* Texto a la derecha */}
               <div className="flex flex-col gap-3">
-                <h3 className="text-2xl font-bold text-gray-900">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">
                   {feature.title}
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -157,15 +157,15 @@ export default function Home() {
       {/* Section 4 */}
       <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]">
         <div className="max-w-4xl mx-auto text-left space-y-6">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#8D8677]">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#8D8677]">
             {content.section4.title}
           </h2>
           {content.section4.subtitle && (
-            <h3 className="text-xl md:text-3xl font-semibold text-[#162128]">
+            <h3 className="text-lg md:text-2xl font-semibold text-[#162128]">
               {content.section4.subtitle}
             </h3>
           )}
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
             {content.section4.description}
           </p>
         </div>
@@ -180,15 +180,15 @@ export default function Home() {
       {content.section5 && (
         <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]">
           <div className="max-w-4xl mx-auto text-left space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#8D8677]">
+            <h2 className="text-2xl md:text-4xl font-bold text-[#8D8677]">
               {content.section5.title}
             </h2>
             {content.section5.subtitle && (
-              <h3 className="text-xl md:text-3xl font-semibold text-[#162128]">
+              <h3 className="text-lg md:text-2xl font-semibold text-[#162128]">
                 {content.section5.subtitle}
               </h3>
             )}
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
               {content.section5.description}
             </p>
           </div>
