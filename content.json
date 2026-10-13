@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "title": "Francisco Javier Muñiz N° 531",
+    "subtitle": "Gran Logia de la Argentina de Libres y Aceptados Masones",
+    "leftImage": "/masonic-symbol.webp",
+    "rightImage": "/javier-muniz.jfif"
+  },
+  "heroDescription": {
+    "title": "Pensamiento libre. \nConducta íntegra.",
+    "subtitle": "Fraternidad en acción",
+    "description": "Un camino de conocimiento, \n perfeccionamiento personal \n y compromiso con la humanidad."
+  },
+  "section2": {
+    "title": "Nuestro Taller",
+    "subtitle": "Un espacio para pensar, aprender y construir.",
+    "description": "La masonería nos invita a trabajar sobre nosotros mismos, a examinar nuestras ideas con libertad y a convertir nuestors valores en acciones concretas. En el taller, el estudio, el diálogo y la fraternidad se unen en una búsqueda permanente de superación."
+  },
+  "section3": {
+    "title": "Nuestros Principios",
+    "subtitle": "",
+    "description": ""
+  },
+  "section4": {
+    "title": "Nuestro Lema",
+    "subtitle": "Ciencia . Justicia . Trabajo",
+    "description": "La ciencia como búsqueda del conocimiento. \n La justicia como fundamento de la convivencia. \n El trabajo como herramienta de transformación individual y colectiva."
+  },
+  "section5": {
+    "title": "Una invitación",
+    "subtitle": "Todo camino comienza con una pregunta.",
+    "description": "Si te interesa el pensamiento libre, el desarrollo personal y la posibilidad de contribuir a una sociedad más justa, te invitamos a iniciar una conversación y conocer los principios de la masonería."
+  },
+  "features": [
+    {
+      "title": "Libertad",
+      "leftImage": "/libertad.JPG",
+      "description": "Pensar sin imposiciones, investigar con rigor y ejercer la conciencia con responsabilidad."
+    },
+    {
+      "title": "Igualdad",
+      "leftImage": "/igualdad.JPG",
+      "description": "Reconocer la dignidad de cada persona y encontrarnos desde el respeto, más allá de nuestras diferencias."
+    },
+    {
+      "title": "Fraternidad",
+      "leftImage": "/fraternidad.JPG",
+      "description": "Hacer de la solidaridad, la comprensión y la ayuda mutua una práctica cotidiana."
+    }
+  ],
+  "cta": {
+    "buttonText": "Conocer - Preguntar - Reflexionar",
+    "googleFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeJEVACDo58ZilzL_bIwmoTVctLRyZxdhFbKxPyjVhz_UfSlw/viewform?usp=header"
+  }
+}

@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page - Next.js + Tailwind CSS
 
-## Getting Started
+Una landing page moderna y responsive con administración de contenido simple mediante JSON.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- ✅ Diseño responsive (mobile y desktop)
+- ✅ Hero fullscreen que cubre toda la pantalla
+- ✅ Contenido editable vía archivo JSON
+- ✅ Next.js + Tailwind CSS
+- ✅ Fácil despliegue en GitHub Pages
+- ✅ 4 secciones de contenido (Hero + 3 secciones adicionales)
+- ✅ Lista vertical de características
+- ✅ Botón CTA que abre Google Form
+
+## Estructura del Proyecto
+
+```
+├── app/
+│   ├── page.tsx          # Componente principal de la landing page
+│   ├── layout.tsx        # Layout de la aplicación
+│   └── globals.css       # Estilos globales
+├── public/               # Imágenes y assets estáticos
+├── content.json          # Archivo de configuración de contenido
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cómo Editar el Contenido
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Abre el archivo `content.json` en la raíz del proyecto para editar:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```json
+{
+  "hero": {
+    "title": "Tu título principal",
+    "subtitle": "Subtítulo opcional",
+    "description": "Tu descripción principal",
+    "leftImage": "/imagen-izquierda.svg",
+    "rightImage": "/imagen-derecha.jpg"
+  },
+  "section2": {
+    "title": "Título de la sección 2",
+    "description": "Descripción detallada"
+  },
+  "section3": {
+    "title": "Título de la sección 3",
+    "description": "Descripción detallada"
+  },
+  "section4": {
+    "title": "Título de la sección 4",
+    "description": "Descripción detallada"
+  },
+  "features": [
+    {
+      "title": "Título de característica",
+      "description": "Descripción"
+    }
+  ],
+  "cta": {
+    "buttonText": "Texto del botón",
+    "googleFormUrl": "https://docs.google.com/forms/..."
+  }
+}
+```
 
-## Learn More
+### Secciones
 
-To learn more about Next.js, take a look at the following resources:
+- **Hero**: Sección fullscreen que cubre toda la pantalla (título, subtítulo opcional, descripción)
+- **Section 2, 3, 4**: Secciones adicionales con título y descripción
+- **Features**: Lista vertical de características
+- **CTA**: Botón que abre Google Form
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Desarrollo Local
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Instalar dependencias (si no está hecho)
+npm install
 
-## Deploy on Vercel
+# Ejecutar servidor de desarrollo
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Build para Producción
+
+```bash
+npm run build
+```
+
+## Despliegue en GitHub Pages
+
+### Opción 1: GitHub Actions (Automático)
+
+1. Crea un nuevo repositorio en GitHub
+2. Sube el código al repositorio
+3. Crea el archivo `.github/workflows/deploy.yml`:
+
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: npm run build
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+```
+
+4. Ve a Settings > Pages y selecciona la rama `gh-pages`
+
+### Opción 2: Manual
+
+```bash
+# Build del proyecto
+npm run build
+
+# El sitio generado estará en la carpeta `out/`
+# Sube el contenido de `out/` a GitHub Pages manualmente
+```
+
+## Personalización
+
+### Colores
+
+Edita los colores en `app/page.tsx`:
+- Gradients: `bg-gradient-to-b from-gray-50 to-white`
+- Texto: `text-gray-900`, `text-gray-600`
+- Botón: `bg-blue-600 hover:bg-blue-700`
+
+### Layout
+
+El diseño usa un grid de 2 columnas en desktop (`md:grid-cols-2`) y 1 columna en mobile. Las características sin imagen ocupan todo el ancho automáticamente.
+
+## Tecnologías
+
+- **Next.js 16** - Framework React
+- **Tailwind CSS** - Framework de estilos
+- **TypeScript** - Tipado estático
+- **GitHub Pages** - Hosting gratuito
