@@ -1,5 +1,6 @@
 import Image from "next/image";
 import content from "../content.json";
+import { publicPath } from "@/lib/publicPath";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
             {content.hero.leftImage && (
               <div className="relative w-10 h-10 sm:w-16 sm:h-16 md:w-32 md:h-32 flex-shrink-0">
                 <Image
-                  src={content.hero.leftImage}
+                  src={publicPath(content.hero.leftImage)}
                   alt="Símbolo Masónico"
                   fill
                   className="object-contain"
