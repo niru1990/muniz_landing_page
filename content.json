@@ -31,6 +31,13 @@
     "subtitle": "Todo camino comienza con una pregunta.",
     "description": "Si te interesa el pensamiento libre, el desarrollo personal y la posibilidad de contribuir a una sociedad más justa, te invitamos a iniciar una conversación y conocer los principios de la masonería."
   },
+  "section6": {
+    "title": "Los hermanos sean unidos",
+    "subtitle": "¿Quién nos habla?",
+    "description": "Como libres y aceptados Masones no somos solo un taller aislado, nos encotramos en union con la ",
+    "link": "https://www.masoneria-argentina.org.ar/",
+    "linkText": "Gran Logia Argentina de Libres y Aceptados Masones"
+  },
   "features": [
     {
       "title": "Libertad",
