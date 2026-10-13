@@ -33,17 +33,17 @@
   "features": [
     {
       "title": "Libertad",
-      "leftImage": "/libertad.JPG",
+      "image": "/libertad.JPG",
       "description": "Pensar sin imposiciones, investigar con rigor y ejercer la conciencia con responsabilidad."
     },
     {
       "title": "Igualdad",
-      "leftImage": "/igualdad.JPG",
+      "image": "/igualdad.JPG",
       "description": "Reconocer la dignidad de cada persona y encontrarnos desde el respeto, más allá de nuestras diferencias."
     },
     {
       "title": "Fraternidad",
-      "leftImage": "/fraternidad.JPG",
+      "image": "/fraternidad.JPG",
       "description": "Hacer de la solidaridad, la comprensión y la ayuda mutua una práctica cotidiana."
     }
   ],

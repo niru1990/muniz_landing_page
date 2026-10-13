@@ -126,7 +126,7 @@ export default function Home() {
               {/* Imagen a la izquierda */}
               <div className="relative w-20 h-20 md:w-32 md:h-32 flex-shrink-0">
                 <Image
-                  src={publicPath(content.hero.leftImage)}
+                  src={publicPath(feature.image)}
                   alt={`Símbolo Masónico de ${feature.title}`}
                   fill
                   className="object-contain"
