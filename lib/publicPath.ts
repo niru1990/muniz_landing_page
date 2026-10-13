@@ -1,6 +1,6 @@
 
 const BASE_PATH =
-  process.env.NODE_ENV === "production"
+  process.env.GITHUB_PAGES === "true"
     ? "/muniz_landing_page"
     : "";
 

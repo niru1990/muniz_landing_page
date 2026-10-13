@@ -39,7 +39,7 @@ export default function Home() {
             {content.hero.rightImage && (
               <div className="relative w-10 h-10 sm:w-16 sm:h-16 md:w-32 md:h-32 flex-shrink-0">
                 <Image
-                  src={content.hero.rightImage}
+                  src={publicPath(content.hero.rightImage)}
                   alt="Javier Muñiz"
                   fill
                   className="object-cover rounded-full"

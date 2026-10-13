@@ -27,6 +27,8 @@ jobs:
         run: npm ci
 
       - name: Build Next.js
+        env:
+          GITHUB_PAGES: "true"
         run: npm run build
 
       - name: Deploy to GitHub Pages
