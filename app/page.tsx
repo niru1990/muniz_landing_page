@@ -26,11 +26,17 @@ export default function Home() {
             {/* Título y subtítulo central */}
             <div className="flex-1 min-w-0 text-center">
               <h1 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight whitespace-pre-line break-words">
+                {content.hero.encabezado}
+              </h1>
+              <h1 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight whitespace-pre-line break-words">
                 {content.hero.title}
               </h1>
               {content.hero.subtitle && (
                 <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-semibold text-blue-400 mt-1 leading-snug whitespace-pre-line break-words">
                   {content.hero.subtitle}
+                  <a href={content.section6.link} className="text-blue-600 hover:underline">
+            {content.section6.linkText}
+          </a>
                 </h2>
               )}
             </div>
@@ -78,6 +84,31 @@ export default function Home() {
         </section>
       )}
 
+      {/* Section 5 */}
+      {content.section5 && (
+        <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]">
+          <div className="max-w-4xl mx-auto text-left space-y-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-[#8D8677]">
+              {content.section5.title}
+            </h2>
+            {content.section5.subtitle && (
+              <h3 className="text-lg md:text-2xl font-semibold text-[#162128]">
+                {content.section5.subtitle}
+              </h3>
+            )}
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              {content.section5.description}
+            </p>
+          </div>
+        </section>
+      )}
+      <div className="container mx-auto px-4">
+        <div className="w-full max-w-screen-2xl mx-auto mb-6">
+          <hr className="w-full border-t-4 border-yellow-500" />
+        </div>
+      </div>
+
+
       {/* Section 2 */}
       <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]">
         <div className="max-w-4xl mx-auto text-left space-y-6">
@@ -94,6 +125,9 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      
+
       <div className="container mx-auto px-4">
         <div className="w-full max-w-screen-2xl mx-auto mb-6">
           <hr className="w-full border-t-4 border-yellow-500" />
@@ -176,30 +210,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Section 5 */}
-      {content.section5 && (
-        <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]">
-          <div className="max-w-4xl mx-auto text-left space-y-6">
-            <h2 className="text-2xl md:text-4xl font-bold text-[#8D8677]">
-              {content.section5.title}
-            </h2>
-            {content.section5.subtitle && (
-              <h3 className="text-lg md:text-2xl font-semibold text-[#162128]">
-                {content.section5.subtitle}
-              </h3>
-            )}
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              {content.section5.description}
-            </p>
-          </div>
-        </section>
-      )}
-      <div className="container mx-auto px-4">
-        <div className="w-full max-w-screen-2xl mx-auto mb-6">
-          <hr className="w-full border-t-4 border-yellow-500" />
-        </div>
-      </div>
-
       {/* CTA Button Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="flex justify-center">
@@ -212,11 +222,11 @@ export default function Home() {
             {content.cta.buttonText}
           </a>
         </div>
-      </section>
+      </section>      
 
       {/* Footer */}
       <footer className="container mx-auto px-4 py-8 text-center text-gray-500">
-        <p>&copy; 2026 Todos los derechos reservados</p>
+        <p>&copy; 2026 (e.·. v.·.) Todos los derechos reservados</p>
       </footer>
     </div>
   );

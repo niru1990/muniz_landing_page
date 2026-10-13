@@ -1,14 +1,15 @@
 {
   "hero": {
-    "title": "Francisco Javier Muñiz N° 531",
-    "subtitle": "Gran Logia de la Argentina de Libres y Aceptados Masones",
+    "encabezado": " A L.·. G.·. D.·. G.·. A.·. D.·. U.·.",
+    "title": "Logia Francisco Javier Muñiz N° 531",
+    "subtitle": "Bajo los auspicios de la ",
     "leftImage": "/masonic-symbol.webp",
     "rightImage": "/javier-muniz.jfif"
   },
   "heroDescription": {
     "title": "Pensamiento libre. \nConducta íntegra.",
     "subtitle": "Fraternidad en acción",
-    "description": "Un camino de conocimiento, \n perfeccionamiento personal \n y compromiso con la humanidad."
+    "description": "Un camino de conocimiento, perfeccionamiento personal y compromiso con la humanidad."
   },
   "section2": {
     "title": "Nuestro Taller",
