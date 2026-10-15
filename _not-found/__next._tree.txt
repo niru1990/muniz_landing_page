@@ -1,4 +1,4 @@
-:HL["/muniz_landing_page/_next/static/chunks/1nm8cuu0rdlf4.css","style"]
+:HL["/muniz_landing_page/_next/static/chunks/0_b6o8aie0o6-.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"SXXGHUVFSc12cyZUtWfdq","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"08JI4GHGZ6ZimJgCMupjh","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
