@@ -3,14 +3,15 @@
     "encabezado": " A L.·. G.·. D.·. G.·. A.·. D.·. U.·.",
     "title": "Logia Francisco Javier Muñiz N° 531",
     "subtitle": "Bajo los auspicios de la ",
-    "leftImage": "/masonic-symbol.webp",
+    "leftImage": "/masonic-symbol.png",
     "rightImage": "/javier-muniz.jfif"
   },
   "heroDescription": {
-    "title": "Pensamiento libre. \nConducta íntegra.",
+    "title": "Pensamiento libre. Conducta íntegra.",
     "subtitle": "Fraternidad en acción",
-    "description": "Un camino de conocimiento, perfeccionamiento personal y compromiso con la humanidad."
-  },
+    "description": "Un camino de conocimiento, perfeccionamiento personal y compromiso con la humanidad.",
+    "leftImage": "/standarte.png"
+    },
   "section2": {
     "title": "Nuestro Taller",
     "subtitle": "Un espacio para pensar, aprender y construir.",

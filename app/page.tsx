@@ -4,9 +4,9 @@ import { publicPath } from "@/lib/publicPath";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen">
       {/* Hero Section - 15% height */}
-      <section className="relative w-full min-h-[15vh] py-3 flex flex-col items-center justify-center bg-[#0E1E2E]">
+      <section className="relative w-full min-h-[15vh] py-3 flex flex-col items-center justify-center bg-[#0E1E2E]/90">
         <div className="relative z-10 w-full px-2 md:px-8 flex items-center justify-center">
           {/* Parte superior: Imágenes, título y subtítulo en una línea */}
           <div className="flex flex-row items-center justify-between w-full max-w-7xl gap-2 md:gap-6">
@@ -59,26 +59,41 @@ export default function Home() {
 
       {/* Hero Description Section */}
       {content.heroDescription && (
-        <section className="relative w-full py-8 md:py-12 bg-[#0E1E2E]">
+        <section className="relative w-full py-8 md:py-12 bg-[#0E1E2E]/90">
           <div className="w-full px-4 md:px-8 flex flex-col items-center justify-center">
             {/* Línea dorada separadora */}
             <div className="w-full max-w-screen-2xl mx-auto mb-6">
               <hr className="w-full border-t-4 border-yellow-500" />
             </div>
 
-            {/* Descripción adicional */}
-            <div className="w-full max-w-7xl mx-auto text-center space-y-3">
-              <h3 className="text-lg md:text-3xl lg:text-4xl font-bold text-white whitespace-pre-line break-words">
-                {content.heroDescription.title}
-              </h3>
-              {content.heroDescription.subtitle && (
-                <h4 className="text-base md:text-2xl lg:text-3xl font-semibold text-[#D2BB81] whitespace-pre-line break-words">
-                  {content.heroDescription.subtitle}
-                </h4>
+            {/* Descripción adicional con imagen */}
+            <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12">
+              {/* Imagen izquierda */}
+              {content.heroDescription.leftImage && (
+                <div className="relative w-24 h-24 md:w-48 md:h-48 flex-shrink-0">
+                  <Image
+                    src={publicPath(content.heroDescription.leftImage)}
+                    alt="Standarte"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               )}
-              <p className="text-sm md:text-lg lg:text-xl text-gray-200 leading-relaxed whitespace-pre-line break-words">
-                {content.heroDescription.description}
-              </p>
+
+              {/* Texto */}
+              <div className="flex-1 text-left space-y-3">
+                <h3 className="text-lg md:text-3xl lg:text-4xl font-bold text-white whitespace-pre-line break-words">
+                  {content.heroDescription.title}
+                </h3>
+                {content.heroDescription.subtitle && (
+                  <h4 className="text-base md:text-2xl lg:text-3xl font-semibold text-[#D2BB81] whitespace-pre-line break-words">
+                    {content.heroDescription.subtitle}
+                  </h4>
+                )}
+                <p className="text-sm md:text-lg lg:text-xl text-gray-200 leading-relaxed whitespace-pre-line break-words">
+                  {content.heroDescription.description}
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -86,7 +101,7 @@ export default function Home() {
 
       {/* Section 5 */}
       {content.section5 && (
-        <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]">
+        <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
           <div className="max-w-4xl mx-auto text-left space-y-6">
             <h2 className="text-2xl md:text-4xl font-bold text-[#8D8677]">
               {content.section5.title}
@@ -110,7 +125,7 @@ export default function Home() {
 
 
       {/* Section 2 */}
-      <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]">
+      <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
         <div className="max-w-4xl mx-auto text-left space-y-6">
           <h2 className="text-2xl md:text-4xl font-bold text-[#8D8677]">
             {content.section2.title}
@@ -135,7 +150,7 @@ export default function Home() {
       </div>
 
       {/* Section 3 */}
-      <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]">
+      <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
         <div className="max-w-4xl mx-auto text-left space-y-6 mb-12">
           <h2 className="text-2xl md:text-4xl font-bold text-[#8D8677]">
             {content.section3.title}
@@ -155,7 +170,7 @@ export default function Home() {
           {content.features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-row items-center gap-6 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className="flex flex-row items-center gap-6 p-6 bg-white/90 rounded-lg shadow-sm hover:shadow-md transition-shadow"
             >
               {/* Imagen a la izquierda */}
               <div className="relative w-20 h-20 md:w-32 md:h-32 flex-shrink-0">
@@ -189,7 +204,7 @@ export default function Home() {
       </div>
 
       {/* Section 4 */}
-      <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]">
+      <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
         <div className="max-w-4xl mx-auto text-left space-y-6">
           <h2 className="text-2xl md:text-4xl font-bold text-[#8D8677]">
             {content.section4.title}
