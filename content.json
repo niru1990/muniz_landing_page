@@ -1,7 +1,7 @@
 {
   "hero": {
     "encabezado": " A L.·. G.·. D.·. G.·. A.·. D.·. U.·.",
-    "title": "Logia Francisco Javier Muñiz N° 531",
+    "title": "Logia Francisco Javier Muñiz  N° 531", 
     "subtitle": "Bajo los auspicios de la ",
     "leftImage": "/masonic-symbol.png",
     "rightImage": "/javier-muniz.jfif"
@@ -12,7 +12,7 @@
     "description": "Un camino de conocimiento, perfeccionamiento personal y compromiso con la humanidad.",
     "leftImage": "/standarte.png"
     },
-  "section2": {
+  "section2": { 
     "title": "Nuestro Taller",
     "subtitle": "Un espacio para pensar, aprender y construir.",
     "description": "La masonería nos invita a trabajar sobre nosotros mismos, a examinar nuestras ideas con libertad y a convertir nuestors valores en acciones concretas. En el taller, el estudio, el diálogo y la fraternidad se unen en una búsqueda permanente de superación."
@@ -39,6 +39,11 @@
     "link": "https://www.masoneria-argentina.org.ar/",
     "linkText": "Gran Logia Argentina de Libres y Aceptados Masones"
   },
+  "sectionHistory": {
+    "title": "Quien fue Francisco Javier Muñiz",
+    "subtitle": "",
+    "description": ""
+  },
   "features": [
     {
       "title": "Libertad",
@@ -58,6 +63,10 @@
   ],
   "cta": {
     "buttonText": "Conocer - Preguntar - Reflexionar",
+    "buttonTextWhatsapp": "Contactanos por whastapp",
+    "buttonWhatsappUrl": "https://wa.me/5491139499049",
+    "buttonIconWhatsapp": "whastapp.png",
+    "buttonTextForm": "Acercate por formulario",
     "googleFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeJEVACDo58ZilzL_bIwmoTVctLRyZxdhFbKxPyjVhz_UfSlw/viewform?usp=header"
   }
 }
