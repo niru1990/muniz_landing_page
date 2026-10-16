@@ -1,12 +1,15 @@
 import Image from "next/image";
 import content from "../content.json";
 import { publicPath } from "@/lib/publicPath";
+import PreguntasFrecuentes from "@/lib/PreguntasFrecuentes";
+
 
 export default function Home() {
+  
   return (
     <div className="min-h-screen">
       {/* Hero Section - 15% height */}
-      <section className="relative w-full min-h-[15vh] py-3 flex flex-col items-center justify-center bg-[#0E1E2E]/90">
+      <section id="inicio" className="relative w-full min-h-[15vh] py-3 flex flex-col items-center justify-center bg-[#0E1E2E]/90">
         <div className="relative z-10 w-full px-2 md:px-8 flex items-center justify-center">
           {/* Parte superior: Imágenes, título y subtítulo en una línea */}
           <div className="flex flex-row items-center justify-between w-full max-w-7xl gap-2 md:gap-6">
@@ -100,24 +103,98 @@ export default function Home() {
       )}
 
 
+      
+      {/* Menú de navegación */}
+      <nav className="sticky top-0 z-50 w-full bg-[#0E1E2E]/95 backdrop-blur-sm border-y border-[#C59E46]/70 shadow-md">
+        <div className="max-w-7xl mx-auto px-3 md:px-8">
+          <div className="flex items-center justify-center gap-2 md:gap-6 py-3 overflow-x-auto">
+            <a
+              href="#section2"
+              className="shrink-0 px-3 py-2 text-sm md:text-base text-[#D2BB81] hover:text-white transition-colors"
+            >
+              {content.section2.title}
+            </a>
+
+            <a
+              href="#sectionHistory"
+              className="shrink-0 px-3 py-2 text-sm md:text-base text-[#D2BB81] hover:text-white transition-colors"
+            >
+              {content.sectionHistory.title}
+            </a>
+
+            <a
+              href="#section3"
+              className="shrink-0 px-3 py-2 text-sm md:text-base text-[#D2BB81] hover:text-white transition-colors"
+            >
+              {content.section3.title}
+            </a>
+
+            <a
+              href="#section4"
+              className="shrink-0 px-3 py-2 text-sm md:text-base text-[#D2BB81] hover:text-white transition-colors"
+            >
+              {content.section4.title}
+            </a>
+
+            <a
+              href="#preguntas"
+              className="shrink-0 px-3 py-2 text-sm md:text-base text-[#D2BB81] hover:text-white transition-colors"
+            >
+              Preguntas frecuentes
+            </a>
+
+            {content.section5 && (
+              <a
+                href="#section5"
+                className="shrink-0 px-3 py-2 text-sm md:text-base text-[#D2BB81] hover:text-white transition-colors"
+              >
+                Contactanos
+              </a>
+            )}
+          </div>
+        </div>
+      </nav>
+      
+
       {/* Section 2 */}
-      <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
+      <section id="section2" className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
         <div className="max-w-4xl mx-auto text-left space-y-6">
-          <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677]">
-            {content.section2.title}
-          </h2>
+
+          {/* Título con acacia a la izquierda */}
+          <div className="flex items-center gap-3 md:gap-4">
+            {content.decotarionImage.acaciaImage && (
+              <div className="relative w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 shrink-0">
+                <Image
+                  src={publicPath(content.decotarionImage.acaciaImage)}
+                  alt="Acacia"
+                  fill
+                  sizes="(max-width: 639px) 40px, (max-width: 767px) 56px, 80px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            )}
+
+            <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677]">
+              {content.section2.title}
+            </h2>
+          </div>
+
+          {/* Subtítulo */}
           {content.section2.subtitle && (
             <h3 className="text-lg md:text-2xl font-Arial text-[#162128]">
               {content.section2.subtitle}
             </h3>
           )}
+
+          {/* Descripción */}
           <p className="text-base md:text-lg text-gray-600 leading-relaxed font-Arial">
             {content.section2.description}
           </p>
+
         </div>
       </section>
 
-      
 
       <div className="container mx-auto px-4">
         <div className="w-full max-w-screen-2xl mx-auto mb-6">
@@ -125,12 +202,75 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Section History */}
+      <section id="sectionHistory" className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
+        <div className="max-w-4xl mx-auto text-left space-y-6">
+
+          {/* Título con acacia a la izquierda */}
+          <div className="flex items-center gap-3 md:gap-4">
+            {content.decotarionImage.acaciaImage && (
+              <div className="relative w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 shrink-0">
+                <Image
+                  src={publicPath(content.decotarionImage.acaciaImage)}
+                  alt="Acacia"
+                  fill
+                  sizes="(max-width: 639px) 40px, (max-width: 767px) 56px, 80px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            )}
+            
+            <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677]">
+              {content.sectionHistory.title}
+            </h2>
+          </div>
+          
+          {content.sectionHistory.subtitle && (
+            <h3 className="text-lg md:text-2xl font-Arial text-[#162128]">
+              {content.sectionHistory.subtitle}
+            </h3>
+          )}
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed font-Arial">
+            {content.sectionHistory.description}
+          </p>
+          <a href={content.sectionHistory.link} className="shrink-0 px-3 py-2 text-sm md:text-base text-gray-500 hover:text-white transition-colors">
+              {content.sectionHistory.linkText}
+          </a>
+        </div>
+      </section>
+
+      <div className="container mx-auto px-4">
+        <div className="w-full max-w-screen-2xl mx-auto mb-6">
+          <hr className="w-full border-t-4 border-[#C59E46]" />
+        </div>
+      </div>
+
+
+
       {/* Section 3 */}
-      <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
+      <section id="section3" className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
         <div className="max-w-4xl mx-auto text-left space-y-6 mb-12">
-          <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677]">
-            {content.section3.title}
-          </h2>
+          {/* Título con acacia a la izquierda */}
+          <div className="flex items-center gap-3 md:gap-4">
+            {content.decotarionImage.acaciaImage && (
+              <div className="relative w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 shrink-0">
+                <Image
+                  src={publicPath(content.decotarionImage.acaciaImage)}
+                  alt="Acacia"
+                  fill
+                  sizes="(max-width: 639px) 40px, (max-width: 767px) 56px, 80px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            )}
+            
+            <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677]">
+              {content.section3.title}
+            </h2>
+          </div>
+          
           {content.section3.subtitle && (
             <h3 className="text-lg md:text-2xl font-Arial text-[#162128]">
               {content.section3.subtitle}
@@ -141,36 +281,44 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Features - Vertical List */}
-        <div className="max-w-4xl mx-auto space-y-8">
+       
+        {/* Features - Tarjetas interactivas */}
+        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {content.features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-row items-center gap-6 p-6 bg-white/90 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className="group relative min-h-64 overflow-hidden rounded-lg bg-white/90 shadow-sm hover:shadow-lg transition-all duration-300"
             >
-              {/* Imagen a la izquierda */}
-              <div className="relative w-20 h-20 md:w-32 md:h-32 flex-shrink-0">
-                <Image
-                  src={publicPath(feature.image)}
-                  alt={`Símbolo Masónico de ${feature.title}`}
-                  fill
-                  className="object-contain"
-                  priority={index === 0}
-                />
+              {/* Imagen y título */}
+              <div className="flex h-64 flex-col items-center justify-center gap-4 p-6 transition-opacity duration-300 group-hover:opacity-0">
+                <div className="relative w-28 h-28 shrink-0">
+                  <Image
+                    src={publicPath(feature.image)}
+                    alt={`${feature.title}`}
+                    fill
+                    className="object-contain"
+                    priority={index === 0}
+                  />
+                </div>
+
+                <h3 className="text-center text-xl md:text-2xl font-serif text-gray-900">
+                  {feature.title}
+                </h3>
               </div>
 
-              {/* Texto a la derecha */}
-              <div className="flex flex-col gap-3">
-                <h3 className="text-xl md:text-2xl font-serif text-gray-900">
+              {/* Contenido expandido al pasar el mouse */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center overflow-y-auto bg-[#0E1E2E] p-6 text-center opacity-0 scale-95 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">
+                <h3 className="mb-4 text-xl md:text-2xl font-serif text-[#D2BB81]">
                   {feature.title}
                 </h3>
 
-                <p className="text-sm md:text-base text-gray-600 leading-relaxed font-Arial">
+                <p className="text-sm md:text-base text-gray-200 leading-relaxed font-Arial">
                   {feature.description}
                 </p>
               </div>
             </div>
           ))}
+
         </div>
       </section>
       <div className="container mx-auto px-4">
@@ -180,19 +328,67 @@ export default function Home() {
       </div>
 
       {/* Section 4 */}
-      <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
+      <section id="section4" className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
         <div className="max-w-4xl mx-auto text-left space-y-6">
-          <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677]">
-            {content.section4.title}
-          </h2>
-          {content.section4.subtitle && (
-            <h3 className="text-lg md:text-2xl font-Arial text-[#162128]">
-              {content.section4.subtitle}
-            </h3>
-          )}
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed font-Arial">
-            {content.section4.description}
-          </p>
+
+          {/* Título con acacia a la izquierda */}
+          <div className="flex items-center gap-3 md:gap-4">
+            {content.decotarionImage.acaciaImage && (
+              <div className="relative w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 shrink-0">
+                <Image
+                  src={publicPath(content.decotarionImage.acaciaImage)}
+                  alt="Acacia"
+                  fill
+                  sizes="(max-width: 639px) 40px, (max-width: 767px) 56px, 80px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            )}
+            
+            <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677]">
+              {content.section4.title}
+            </h2>
+          </div>
+          
+          {/* Lema - Tarjetas interactivas */}
+        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {content.lemas.map((lema, index) => (
+            <div
+              key={index}
+              className="group relative min-h-64 overflow-hidden rounded-lg bg-white/90 shadow-sm hover:shadow-lg transition-all duration-300"
+            >
+              {/* Imagen y título */}
+              <div className="flex h-64 flex-col items-center justify-center gap-4 p-6 transition-opacity duration-300 group-hover:opacity-0">
+                <div className="relative w-28 h-28 shrink-0">
+                  <Image
+                    src={publicPath(lema.image)}
+                    alt={`${lema.title}`}
+                    fill
+                    className="object-contain"
+                    priority={index === 0}
+                  />
+                </div>
+
+                <h3 className="text-center text-xl md:text-2xl font-serif text-gray-900">
+                  {lema.title}
+                </h3>
+              </div>
+
+              {/* Contenido expandido al pasar el mouse */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center overflow-y-auto bg-[#0E1E2E] p-6 text-center opacity-0 scale-95 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">
+                <h3 className="mb-4 text-xl md:text-2xl font-serif text-[#D2BB81]">
+                  {lema.title}
+                </h3>
+
+                <p className="text-sm md:text-base text-gray-200 leading-relaxed font-Arial">
+                  {lema.description}
+                </p>
+              </div>
+            </div>
+          ))}
+
+        </div>
         </div>
       </section>
       <div className="container mx-auto px-4">
@@ -201,56 +397,140 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Section 5 */}
-      {content.section5 && (
-        <section className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
-          <div className="max-w-4xl mx-auto text-left space-y-6">
-            <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677]">
-              {content.section5.title}
-            </h2>
-            {content.section5.subtitle && (
-              <h3 className="text-lg md:text-2xl font-Arial text-[#162128]">
-                {content.section5.subtitle}
-              </h3>
+      
+      
+      {/* Preguntas frecuentes */}
+      <section
+        id="preguntas"
+        className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90"
+      >
+        <div className="max-w-4xl mx-auto">
+
+          {/* Título */}
+          <div className="flex items-center gap-3 md:gap-4 mb-10">
+            {content.decotarionImage.acaciaImage && (
+              <div className="relative w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 shrink-0">
+                <Image
+                  src={publicPath(content.decotarionImage.acaciaImage)}
+                  alt="Acacia"
+                  fill
+                  sizes="(max-width: 639px) 40px, (max-width: 767px) 56px, 80px"
+                  className="object-contain"
+                />
+              </div>
             )}
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed font-Arial">
-              {content.section5.description}
-            </p>
+
+            <div>
+              <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677]">
+                {content.preguntasFrecuentes.title}
+              </h2>
+              <p className="mt-2 text-sm md:text-base text-gray-600 font-Arial">
+                Encontrá respuestas a las consultas más habituales.
+              </p>
+            </div>
           </div>
-        </section>
-      )}
+
+          <PreguntasFrecuentes />
+
+        </div>
+      </section>
+
+      {/* Separador dorado */}
       <div className="container mx-auto px-4">
         <div className="w-full max-w-screen-2xl mx-auto mb-6">
           <hr className="w-full border-t-4 border-[#C59E46]" />
         </div>
       </div>
 
-      {/* CTA Button Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
-        <div className="flex justify-center">
-          <a
-            href={content.cta.buttonWhatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-[#0E1E2E] rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-          >
-            {content.cta.buttonTextWhatsapp}
-          </a>
+      
+      {/* Section 5 */}
+      {content.section5 && (
+        <section
+          id="section5"
+          className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90"
+        >
+          <div className="max-w-4xl mx-auto">
 
-          <a
-            href={content.cta.googleFormUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-[#0E1E2E] rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-          >
-            {content.cta.buttonTextForm}
-          </a>
+            {/* Contenido y botones */}
+            <div className="flex flex-col md:flex-row md:items-stretch gap-8 md:gap-10">
+
+              {/* Texto: conserva el estilo de las demás secciones */}
+              <div className="flex-1 min-w-0 text-left space-y-6">
+
+                {/* Título con acacia a la izquierda */}
+                <div className="flex items-center gap-3 md:gap-4">
+                  {content.decotarionImage.acaciaImage && (
+                    <div className="relative w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 shrink-0">
+                      <Image
+                        src={publicPath(content.decotarionImage.acaciaImage)}
+                        alt="Acacia"
+                        fill
+                        sizes="(max-width: 639px) 40px, (max-width: 767px) 56px, 80px"
+                        className="object-contain"
+                      />
+                    </div>
+                  )}
+
+                  <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677]">
+                    {content.section5.title}
+                  </h2>
+                </div>
+
+                {content.section5.subtitle && (
+                  <h3 className="text-lg md:text-2xl font-Arial text-[#162128]">
+                    {content.section5.subtitle}
+                  </h3>
+                )}
+
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-Arial">
+                  {content.section5.description}
+                </p>
+              </div>
+
+              {/* Botones a la derecha */}
+              <div className="w-full md:w-56 lg:w-64 shrink-0 flex flex-col justify-center gap-4">
+                <a
+                  href={content.cta.buttonWhatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full min-h-14 items-center justify-center px-5 py-3 text-base font-semibold text-white bg-[#0E1E2E] rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl text-center"
+                >
+                  {content.cta.buttonTextWhatsapp}
+                </a>
+
+                <a
+                  href={content.cta.googleFormUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full min-h-14 items-center justify-center px-5 py-3 text-base font-semibold text-white bg-[#0E1E2E] rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl text-center"
+                >
+                  {content.cta.buttonTextForm}
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      )}
+
+
+
+
+      <div className="container mx-auto px-4">
+        <div className="w-full max-w-screen-2xl mx-auto mb-6">
+          <hr className="w-full border-t-4 border-[#C59E46]" />
         </div>
-      </section>      
+      </div>
+
+          
 
       {/* Footer */}
       <footer className="container mx-auto px-4 py-8 text-center text-gray-500">
-        <p>&copy; 2026 (e.·. v.·.) Todos los derechos reservados</p>
+        <p>&copy; 2026 (e.·. v.·.) Todos los derechos reservados 
+          <a href="#inicio" className="shrink-0 px-3 py-2 text-sm md:text-base text-gray-500 hover:text-white transition-colors">
+              Inicio
+          </a>
+        </p>
       </footer>
     </div>
   );

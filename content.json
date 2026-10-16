@@ -13,17 +13,17 @@
     "leftImage": "/standarte.png"
     },
   "section2": { 
-    "title": "Nuestro Taller",
+    "title": "Nuestro taller",
     "subtitle": "Un espacio para pensar, aprender y construir.",
     "description": "La masonería nos invita a trabajar sobre nosotros mismos, a examinar nuestras ideas con libertad y a convertir nuestors valores en acciones concretas. En el taller, el estudio, el diálogo y la fraternidad se unen en una búsqueda permanente de superación."
   },
   "section3": {
-    "title": "Nuestros Principios",
+    "title": "Nuestros principios",
     "subtitle": "",
     "description": ""
   },
   "section4": {
-    "title": "Nuestro Lema",
+    "title": "Nuestro lema",
     "subtitle": "Ciencia . Justicia . Trabajo",
     "description": "La ciencia como búsqueda del conocimiento. \n La justicia como fundamento de la convivencia. \n El trabajo como herramienta de transformación individual y colectiva."
   },
@@ -41,8 +41,28 @@
   },
   "sectionHistory": {
     "title": "Quien fue Francisco Javier Muñiz",
-    "subtitle": "",
-    "description": ""
+    "subtitle": "Hizo de la ciencia un servicio, de la medicina un deber y de su vida una entrega.",
+    "description": "Francisco Javier Muñiz hizo de la ciencia un servicio, de la medicina un deber y de su vida una entrega a la humanidad. Médico, investigador y servidor de la Nación, comprendió que el conocimiento adquiere su verdadero valor cuando contribuye al bienestar de los demás. \nDesde una mirada masónica, su vida nos recuerda que el perfeccionamiento individual alcanza su sentido más noble cuando se transforma en fraternidad y servicio. Trabajar la piedra bruta implica convertir nuestras capacidades en herramientas para mejorar la sociedad. \nSu entrega durante la epidemia de fiebre amarilla de 1871, que le costó la vida, refleja la coherencia entre sus ideales y sus acciones. Su legado nos enseña que no basta con alcanzar la luz: debemos compartirla y hacer de la fraternidad una práctica cotidiana",
+    "link": "https://www.masoneria-argentina.org.ar/francisco-javier-muniz/",
+    "linkText": "Conocer más"
+  },
+  "preguntasFrecuentes" : {
+    "title": "Preguntas frecuentes",
+    "image": "/preguntas_frecuentes.JPG",
+    "alt": "pregunta",
+    "preguntas" : [
+      {
+        "pregunta": "¿Qué es la Masonería?",
+        "respuesta": "La Masonería es una organización fraternal que promueve la búsqueda del conocimiento, la fraternidad y el perfeccionamiento personal. A través de símbolos y enseñanzas, busca cultivar la virtud, la justicia y el respeto mutuo."
+      },
+      {
+        "pregunta": "¿Cómo puedo expresar mi interés?",
+        "respuesta": "Podés contactar al taller por WhatsApp o por formulario de contacto. Presentate brevemente y explicá por qué te interesa conocer la Logia. Los datos de contacto estarán disponibles próximamente."
+      }
+    ]
+  },
+  "decotarionImage": {
+    "acaciaImage": "/acacia_derecha.png"
   },
   "features": [
     {
@@ -59,6 +79,23 @@
       "title": "Fraternidad",
       "image": "/fraternidad.JPG",
       "description": "Hacer de la solidaridad, la comprensión y la ayuda mutua una práctica cotidiana."
+    }
+  ],
+  "lemas": [
+    {
+      "title": "Ciencia",
+      "image": "/ciencia.png",
+      "description": "La búsqueda del conocimiento como camino hacia la libertad."
+    },
+    {
+      "title": "Justicia",
+      "image": "/justicia.png",
+      "description": "El fundamento de la convivencia humana."
+    },
+    {
+      "title": "Trabajo",
+      "image": "/trabajo.png",
+      "description": "Herramienta de transformación individual y colectiva."
     }
   ],
   "cta": {
