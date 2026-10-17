@@ -2,6 +2,7 @@ import Image from "next/image";
 import content from "../content.json";
 import { publicPath } from "@/lib/publicPath";
 import PreguntasFrecuentes from "@/lib/PreguntasFrecuentes";
+import GoldLine from "@/lib/GoldLine";
 
 
 export default function Home() {
@@ -175,7 +176,7 @@ export default function Home() {
               </div>
             )}
 
-            <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677]">
+            <h2 className="text-2xl md:text-4xl font-serif text-[#8D8677] ">
               {content.section2.title}
             </h2>
           </div>
@@ -188,7 +189,7 @@ export default function Home() {
           )}
 
           {/* Descripción */}
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed font-Arial">
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed font-Arial text-justify hyphens-auto">
             {content.section2.description}
           </p>
 
@@ -196,11 +197,7 @@ export default function Home() {
       </section>
 
 
-      <div className="container mx-auto px-4">
-        <div className="w-full max-w-screen-2xl mx-auto mb-6">
-          <hr className="w-full border-t-4 border-[#C59E46]" />
-        </div>
-      </div>
+      <GoldLine />
 
       {/* Section History */}
       <section id="sectionHistory" className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
@@ -231,20 +228,18 @@ export default function Home() {
               {content.sectionHistory.subtitle}
             </h3>
           )}
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed font-Arial">
+          
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed font-Arial text-justify hyphens-auto">
             {content.sectionHistory.description}
           </p>
+
           <a href={content.sectionHistory.link} className="shrink-0 px-3 py-2 text-sm md:text-base text-gray-500 hover:text-white transition-colors">
               {content.sectionHistory.linkText}
           </a>
         </div>
       </section>
 
-      <div className="container mx-auto px-4">
-        <div className="w-full max-w-screen-2xl mx-auto mb-6">
-          <hr className="w-full border-t-4 border-[#C59E46]" />
-        </div>
-      </div>
+      <GoldLine />
 
 
 
@@ -321,11 +316,8 @@ export default function Home() {
 
         </div>
       </section>
-      <div className="container mx-auto px-4">
-        <div className="w-full max-w-screen-2xl mx-auto mb-6">
-          <hr className="w-full border-t-4 border-[#C59E46]" />
-        </div>
-      </div>
+      
+      <GoldLine />
 
       {/* Section 4 */}
       <section id="section4" className="container mx-auto px-4 py-16 md:py-24 bg-[#F1F2EC]/90">
@@ -391,12 +383,8 @@ export default function Home() {
         </div>
         </div>
       </section>
-      <div className="container mx-auto px-4">
-        <div className="w-full max-w-screen-2xl mx-auto mb-6">
-          <hr className="w-full border-t-4 border-[#C59E46]" />
-        </div>
-      </div>
 
+      <GoldLine />
       
       
       {/* Preguntas frecuentes */}
@@ -435,14 +423,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Separador dorado */}
-      <div className="container mx-auto px-4">
-        <div className="w-full max-w-screen-2xl mx-auto mb-6">
-          <hr className="w-full border-t-4 border-[#C59E46]" />
-        </div>
-      </div>
+      <GoldLine />
 
-      
       {/* Section 5 */}
       {content.section5 && (
         <section
@@ -482,7 +464,7 @@ export default function Home() {
                   </h3>
                 )}
 
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-Arial">
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-Arial text-justify hyphens-auto">
                   {content.section5.description}
                 </p>
               </div>
@@ -514,15 +496,8 @@ export default function Home() {
       )}
 
 
-
-
-      <div className="container mx-auto px-4">
-        <div className="w-full max-w-screen-2xl mx-auto mb-6">
-          <hr className="w-full border-t-4 border-[#C59E46]" />
-        </div>
-      </div>
-
-          
+      <GoldLine />
+         
 
       {/* Footer */}
       <footer className="container mx-auto px-4 py-8 text-center text-gray-500">

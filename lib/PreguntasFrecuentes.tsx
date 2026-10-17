@@ -58,7 +58,7 @@ export default function PreguntasFrecuentes() {
               >
                 <div className="overflow-hidden">
                   <div className="border-t border-[#E8E5DA] px-5 py-5 md:px-7 md:py-6">
-                    <p className="text-sm md:text-base leading-relaxed text-gray-600 font-Arial">
+                    <p className="text-sm md:text-base leading-relaxed text-gray-600 font-Arial text-justify break-words whitespace-pre-line">
                       {pregunta.respuesta}
                     </p>
                   </div>
