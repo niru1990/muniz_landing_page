@@ -36,9 +36,9 @@ export default function Home() {
                 {content.hero.title}
               </h1>
               {content.hero.subtitle && (
-                <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-semibold text-blue-400 mt-1 leading-snug whitespace-pre-line break-words">
+                <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-semibold text-[#D2BB81] mt-1 leading-snug whitespace-pre-line break-words">
                   {content.hero.subtitle}
-                  <a href={content.section6.link} className="text-blue-600 hover:underline">
+                  <a href={content.section6.link} className="text-[#D2BB81] hover:underline">
             {content.section6.linkText}
           </a>
                 </h2>
