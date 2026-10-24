@@ -31,6 +31,17 @@ jobs:
         run: npm run build
         timeout-minutes: 10
 
+      - name: Ensure Cloudflare Pages project exists
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if npx --yes wrangler pages project list 2>&1 | grep -Fq "muniz-landing-page"; then
+            echo "El proyecto ya existe."
+          else
+            npx --yes wrangler pages project create muniz-landing-page --production-branch=master
+          fi
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
